@@ -24,6 +24,7 @@ module AttributeNormalizer
       def failure_message_when_negated
         "expected #{@attribute} to not be normalized from #{@from.nil? ? 'nil' : "\"#{@from}\""} to #{@to.nil? ? 'nil' : "\"#{@to}\""}"
       end
+      alias negative_failure_message failure_message_when_negated
 
       def from(value)
         @from = value
